@@ -2,10 +2,7 @@ Feature: Main menu - labels
 
   Scenario: List of labels
     Given I am on homepage
-     Then I should see "Do gościa"
-      And I should see "Na nabożną"
-      And I should see "Na starą"
-      And I should see "Na swoje księgi"
-      And I should see "Raki"
-      And I should see "Sen"
+     Then I should see "Baa, baa, black sheep"
+      And I should see "Sing a song of sixpence"
+      And I should see "Hush, little baby"
 

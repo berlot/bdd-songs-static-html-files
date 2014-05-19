@@ -5,11 +5,7 @@ Feature: Main menu - subpages
      When I follow "<label>"
      Then I should see "<text>"
     Examples:
-      | label           | text |
-      | Do gościa       | Jesli darmo masz te książki |
-      | Na nabożną      | Jesli nie grzeszysz, jako mi powiadasz |
-      | Na starą        | Teraz by ze mną zygrywać się chciała |
-      | Na swoje księgi | Nie dbają moje papiery |
-      | Raki            | Folgujmy paniom nie sobie, ma rada |
-      | Sen             | Uciekałem przez sen w nocy |
-
+      | label | text |
+      | Baa, baa, black sheep | Baa, baa, black sheep |
+      | Sing a song of sixpence | Sing a song of sixpence |
+      | Hush, little baby | Hush, little baby, don't say a word |
