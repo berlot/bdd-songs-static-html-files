@@ -1,0 +1,6 @@
+/.idea/
+/vendor/
+/.vagrant/
+/tmp/
+.DS_Store
+/composer.lock

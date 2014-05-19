@@ -1,0 +1,9 @@
+default:
+    extensions:
+        Behat\MinkExtension\Extension:
+            goutte: ~
+            selenium2: ~
+            base_url: http://127.0.0.1/web/
+            #javascript_session: selenium2
+            #browser_name: firefox
+
