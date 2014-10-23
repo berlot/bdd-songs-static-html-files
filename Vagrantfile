@@ -3,18 +3,15 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.box = "symfony-v0.2.0"
-    config.vm.hostname = "abc.example.net"
+    config.vm.hostname = "app.lh"
 
-    require 'ffi'
-
-    if FFI::Platform::IS_WINDOWS
-        print "\n\n   ===> win\n\n"
-        config.vm.synced_folder ".", "/vagrant", :nfs => false
-        config.vm.network :forwarded_port, guest: 80, host: 8080
-    else
-        print "\n\n   ===> not win\n\n"
-        config.vm.network :private_network, ip: "33.33.33.10"
-        config.vm.synced_folder ".", "/vagrant", :nfs => true
+    config.vm.provision :puppet do |puppet|
+        puppet.module_path    = "puppet/modules"
+        puppet.manifests_path = "puppet/manifests"
+        puppet.manifest_file  = "default.pp"
+        puppet.options = ['--verbose']
     end
+
+    config.vm.network :forwarded_port, guest: 80, host: 8880
 
 end
