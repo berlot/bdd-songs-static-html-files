@@ -19,3 +19,5 @@ before_script:
 script:
   - bin/behat --stop-on-failure
 
+notifications:
+  email: false
