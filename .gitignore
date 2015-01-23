@@ -4,3 +4,4 @@
 /bin/webunit
 /vendor/
 .DS_Store
+/nbproject/private/
