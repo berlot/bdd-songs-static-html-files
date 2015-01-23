@@ -1,4 +1,5 @@
 /.idea/
+/nbproject/
 /.vagrant/
 /bin/behat
 /bin/webunit
